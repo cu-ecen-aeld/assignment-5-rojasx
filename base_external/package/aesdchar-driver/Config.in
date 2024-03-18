@@ -1,5 +1,5 @@
-config BR2_PACKAGE_AESD_CHAR_DRIVER
-	bool "aesd-char-driver"
+config BR2_PACKAGE_AESDCHAR_DRIVER
+	bool "aesdchar-driver"
 	depends on BR2_LINUX_KERNEL
 	help
 	  Includes char device resources for assignment 8

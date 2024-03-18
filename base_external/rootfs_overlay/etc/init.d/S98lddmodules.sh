@@ -5,16 +5,14 @@ case "$1" in
     start)
         echo "Loading modules"
         scull_load
-        module_load faulty
+        module_load
         modprobe hello
-        aesdchar_load
         ;;
     stop)
         echo "Unloading modules"
         scull_unload
-        aesdchar_unload
         rmmod hello
-        module_unload faulty
+        module_unload
         ;;
     *)
         echo "Usage: $0 {start|stop}"
