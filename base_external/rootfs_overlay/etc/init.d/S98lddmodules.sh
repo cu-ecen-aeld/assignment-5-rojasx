@@ -7,12 +7,14 @@ case "$1" in
         scull_load
         module_load faulty
         modprobe hello
+        aesdchar_load
         ;;
     stop)
         echo "Unloading modules"
         scull_unload
-        module_unload faulty
+        aesdchar_unload
         rmmod hello
+        module_unload faulty
         ;;
     *)
         echo "Usage: $0 {start|stop}"
